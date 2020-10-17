@@ -11,5 +11,5 @@ ls -al ~/.ssh/*
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 
-# use ssh instead of https
+# use ssh (no password is required for git push) instead of https
 git remote set-url origin git@github.com:<name>/<git repo name>.git
