@@ -1,0 +1,76 @@
+[user]
+        email = irezki@gmail.com
+        name  = xvedar
+
+[core]
+        editor = vim
+        excludesfile = ~/.gitignore
+
+[diff]
+   tool = vimdiff
+
+[difftool]
+   prompt = false
+
+[pull]
+        rebase = true
+
+[branch]
+        autosetuprebase = always
+
+[alias]
+        lola        = log --graph --decorate --pretty=oneline --abbrev-commit --all
+        lg          = log --graph --pretty=format:'%C(red bold)%h%Creset -%C(magenta bold)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+        lga         = log --graph --pretty=format:'%C(red bold)%h%Creset -%C(magenta bold)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+        lg-nocolor  = log --graph --pretty=format:'%h -%d %s (%cr) <%an>' --abbrev-commit
+
+        rf = reflog --date=short --pretty=format:'%C(auto)%h - %<|(17)%gd %s (%Cgreen%cd%Creset) %C(blue)<%an>%Creset'
+        cp = cherry-pick -x
+
+        # for current branch only
+        lol         = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(magenta bold)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'
+        lol-nocolor = log --graph --pretty=format:'%h -%d %s (%cr) <%an>'
+        logs = log --stat
+
+        st   = status
+        ci   = commit
+        br   = branch
+        co   = checkout
+        df   = diff
+        dt   = difftool
+        dc   = diff --cached
+        ls   = ls-files
+
+        # number of commits per author on all branches
+        cpa = shortlog -s -n --all --no-merges
+
+        # blame replacement
+        # git log -p -M --follow --stat -- toplevel.sv | less
+        # git blame log
+        blog = log -p -M --follow --stat --
+
+        # Show files ignored by git:
+        ign = ls-files -o -i --exclude-standard
+
+        # Show untracked files
+        utf = ls-files --exclude-standard --others
+
+        # git clean -h
+
+[color]
+        ui = true
+        diff = auto
+        status = auto
+        branch = auto
+
+[log]
+        decorate = full
+
+[color "branch"]
+        #current yellow reverse
+[merge]
+        tool = meld
+[push]
+        default = simple
+[status]
+        showuntrackedfiles = no
