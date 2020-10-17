@@ -1,0 +1,15 @@
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/<git repo>
+git push -u origin master
+
+# generate ssh keys
+ssh-keygen -t rsa -b 4096 -C "<email>"
+ls -al ~/.ssh/*
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+
+# use ssh instead of https
+git remote set-url origin git@github.com:<name>/<git repo name>.git
