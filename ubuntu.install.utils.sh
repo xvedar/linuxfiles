@@ -8,7 +8,9 @@ sudo systemctl status ssh
 sudo apt install git
 # cd ~/.ssh && ssh-keygen -t rsa -C "irezki@gmail.com"
 # .pub file content to be copied to https://github.com/settings/keys
+# cat ~/.ssh$ cat id_rsa.pub
 # Follow the page steps.
+
 sudo apt install vim
 
 # calibre
